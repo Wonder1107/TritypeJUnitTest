@@ -5,14 +5,15 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class TritypeMCDCTest {
-    //    选择的 decision 为
-    //    Side1+Side2 <= Side3 || Side2+Side3 <= Side1 || Side1+Side3 <= Side2
+    // 选择line 53 desision
+
     @Test
     public void testTriang() {
+        // 选择line 53 desision
         Tritype tri = new Tritype();
-        assertEquals(4, tri.Triang(1, 2, 3));
-        assertEquals(4, tri.Triang(3, 2, 1));
-        assertEquals(4, tri.Triang(1, 3, 2));
-        assertEquals(1, tri.Triang(3, 4, 5));
+        assertEquals(3, tri.Triang(2, 2, 2));
+        assertEquals(4, tri.Triang(0, 2, 2));
+        assertEquals(4, tri.Triang(2, 0, 2));
+        assertEquals(4, tri.Triang(2, 2, 0));
     }
 }
